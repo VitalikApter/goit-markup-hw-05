@@ -36,7 +36,6 @@ a {
   margin: -1px;
 } /*-----------------HEADER-----------------*/
 .header {
-  padding-top: 25px;
   border-bottom: 1px solid;
 }
 .header-container {
@@ -109,7 +108,6 @@ a {
 button:hover,
 button:focus {
   color: #188ce8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*-----------------ADRESS----------------*/
 
@@ -380,7 +378,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-link:hover,
 .team-social-link:focus {
@@ -396,7 +394,7 @@ button:focus {
 
 .team-social-icon {
   fill: #afb1b8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*----------------CLIENTS----------*/
 
@@ -428,29 +426,19 @@ button:focus {
   height: 82px;
   width: 170px;
 }
-.clients-link:hover {
-  border-color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.clients-link:focus {
-  border-color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .clients-link:hover,
 .clients-link:focus {
   border-color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover .clients-icon {
   fill: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:focus,
 .clients-icon {
   fill: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon:hover,
@@ -678,7 +666,8 @@ button:focus {
   padding: 6px 22px;
   border-radius: 4px;
   border-color: transparent;
-  transition: color, background-color,
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-portfolio:hover,
@@ -688,7 +677,6 @@ button:focus {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   color: #ffffff;
-  transition: box-shadow, background, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-text-container {
   padding-top: 20px;
@@ -701,6 +689,7 @@ button:focus {
 }
 .portfolio-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -709,16 +698,24 @@ button:focus {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop .is-hidden {
+.backdrop {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 0;
   position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
   transform: translate(-50%, -50%) scale(0.5);
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   width: 528px;
@@ -731,8 +728,7 @@ button:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn-icon {
@@ -752,9 +748,4 @@ button:focus {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-}
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
 }
