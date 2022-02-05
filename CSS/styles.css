@@ -37,7 +37,6 @@ a {
 } /*-----------------HEADER-----------------*/
 .header {
   padding-top: 25px;
-  padding-bottom: 32px;
   border-bottom: 1px solid;
 }
 .header-container {
@@ -70,6 +69,7 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--first-btn-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover,
 .header-link:focus {
@@ -88,7 +88,7 @@ a {
   position: absolute;
   background-color: var(--link-color);
   left: 0;
-  bottom: -32px;
+  bottom: 0;
   background-image: url(../images/hover.svg);
 }
 
@@ -115,6 +115,7 @@ button:focus {
 
 .adress-link {
   color: var(--adress-lnk-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .adress-link {
   display: flex;
@@ -206,6 +207,7 @@ button:focus {
   border-color: transparent;
   margin-left: auto;
   margin-right: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*------------------SKILS----------------*/
@@ -378,10 +380,12 @@ button:focus {
   align-items: center;
   justify-content: center;
   color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover .team-social-icon,
@@ -392,6 +396,7 @@ button:focus {
 
 .team-social-icon {
   fill: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*----------------CLIENTS----------*/
 
@@ -415,7 +420,7 @@ button:focus {
   margin-right: 30px;
 }
 .clients-icon {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item {
@@ -425,31 +430,33 @@ button:focus {
 }
 .clients-link:hover {
   border-color: #2196f3;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:focus {
   border-color: #2196f3;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  color: #2196f3;
+  border-color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover .clients-icon {
   fill: #2196f3;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.clients-link:focus .clients-icon {
+.clients-link:focus,
+.clients-icon {
   fill: #2196f3;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon:hover,
 .clients-icon:focus {
   fill: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link {
   display: flex;
@@ -460,10 +467,12 @@ button:focus {
   border-radius: 4px;
   width: 100%;
   height: 100%;
-  color: #afb1b8;
+  border-color: #afb1b8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon {
   fill: rgba(175, 177, 184, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*---------------FOOTER------------*/
 .footer {
@@ -495,6 +504,7 @@ button:focus {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--link-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail-tel:not(:last-child) {
   margin-bottom: 9px;
@@ -542,7 +552,7 @@ button:focus {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -623,9 +633,11 @@ button:focus {
 
 .portfolio-link:hover .portfolio-window-text {
   transform: translateY(0);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:focus .portfolio-window-text {
   transform: translateY(0);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-wrap {
@@ -666,6 +678,8 @@ button:focus {
   padding: 6px 22px;
   border-radius: 4px;
   border-color: transparent;
+  transition: color, background-color,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-portfolio:hover,
 .button-portfolio:focus {
@@ -674,7 +688,7 @@ button:focus {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   color: #ffffff;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow, background, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-text-container {
   padding-top: 20px;
@@ -692,7 +706,7 @@ button:focus {
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop .is-hidden {
@@ -703,8 +717,8 @@ button:focus {
   top: 0;
   position: fixed;
   transform: translate(-50%, -50%) scale(0.5);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   width: 528px;
@@ -717,8 +731,8 @@ button:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn-icon {
